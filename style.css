@@ -1931,6 +1931,69 @@ svg {
     color: var(--text-muted);
 }
 
+/* Parent & Teacher Endorsement Cards */
+.parent-endorsement-grid {
+    gap: 32px;
+}
+
+.endorsement-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    padding: 36px;
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: var(--transition);
+}
+
+.endorsement-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-light);
+}
+
+.endorsement-quote-icon {
+    font-family: Georgia, serif;
+    font-size: 3.5rem;
+    color: var(--teal-main);
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: -10px;
+}
+
+.endorsement-quote-text {
+    font-size: 1.03125rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.endorsement-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 18px;
+}
+
+.avatar-medium {
+    width: 48px;
+    height: 48px;
+    font-size: 1.125rem;
+}
+
+.endorsement-author strong {
+    display: block;
+    font-size: 0.96875rem;
+    color: var(--text-dark);
+}
+
+.endorsement-author span {
+    font-size: 0.84375rem;
+    color: var(--text-muted);
+}
+
 /* Responsive adjustments for featured alumni grid */
 @media (max-width: 992px) {
     .featured-alumni-grid {
