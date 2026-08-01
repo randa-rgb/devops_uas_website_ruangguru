@@ -2087,6 +2087,21 @@ svg {
     margin-top: 2px;
 }
 
+/* Google Maps Card Wrapper */
+.map-card-wrapper {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
+    padding: 12px;
+    overflow: hidden;
+}
+
+.map-card-wrapper iframe {
+    display: block;
+    width: 100%;
+}
+
 /* Responsive adjustments for featured alumni grid */
 @media (max-width: 992px) {
     .featured-alumni-grid {
