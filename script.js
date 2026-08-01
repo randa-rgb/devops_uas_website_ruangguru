@@ -258,5 +258,62 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    /* --------------------------------------------------------------------------
+       8. SUBMIT TESTIMONIAL FORM & STAR RATING PICKER
+       -------------------------------------------------------------------------- */
+    const starPicks = document.querySelectorAll('.star-pick');
+    const ratingLabel = document.getElementById('rating-picker-label');
+    const starRatingPicker = document.getElementById('star-rating-picker');
+
+    if (starPicks.length > 0) {
+        starPicks.forEach(star => {
+            star.addEventListener('click', () => {
+                const val = parseInt(star.getAttribute('data-val'));
+                if (starRatingPicker) starRatingPicker.setAttribute('data-rating', val);
+                
+                starPicks.forEach((s, idx) => {
+                    if (idx < val) {
+                        s.classList.add('active');
+                    } else {
+                        s.classList.remove('active');
+                    }
+                });
+
+                if (ratingLabel) {
+                    ratingLabel.textContent = `${val}.0 dari 5 Bintang`;
+                }
+            });
+        });
+    }
+
+    const submitTestiForm = document.getElementById('submit-testimonial-form');
+    const testiSuccessAlert = document.getElementById('testimonial-success-alert');
+
+    if (submitTestiForm) {
+        submitTestiForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if (testiSuccessAlert) {
+                testiSuccessAlert.style.display = 'flex';
+                testiSuccessAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            submitTestiForm.reset();
+
+            // Reset stars to 5
+            if (starPicks.length > 0) {
+                starPicks.forEach(s => s.classList.add('active'));
+                if (ratingLabel) ratingLabel.textContent = '5.0 dari 5 Bintang';
+            }
+
+            setTimeout(() => {
+                if (testiSuccessAlert) {
+                    testiSuccessAlert.style.display = 'none';
+                }
+            }, 6000);
+        });
+    }
 });
+
 
