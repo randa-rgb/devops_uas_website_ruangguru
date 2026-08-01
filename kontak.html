@@ -131,3 +131,59 @@
                             </div>
                         </div>
                     </div>
+                    <div class="contact-form-card">
+                        <h3 class="form-title">Kirim Pesan Kepada Kami</h3>
+
+                        <!-- Inline Success Feedback Toast/Alert (hidden by default) -->
+                        <div class="form-alert form-alert-success" id="form-success-alert" style="display: none;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>Pesan Anda berhasil terkirim! Tim kami akan menghubungi Anda segera.</span>
+                        </div>
+
+                        <form id="contact-form" novalidate>
+                            <div class="form-group">
+                                <label for="contact-name">Nama Lengkap <span class="required">*</span></label>
+                                <input type="text" id="contact-name" name="name" class="form-input"
+                                    placeholder="Masukkan nama lengkap Anda" required>
+                                <span class="error-msg" id="name-error">Nama wajib diisi</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email">Alamat Email <span class="required">*</span></label>
+                                <input type="email" id="contact-email" name="email" class="form-input"
+                                    placeholder="contoh@email.com" required>
+                                <span class="error-msg" id="email-error">Masukkan alamat email yang valid</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-subject">Pilihan Topik / Program</label>
+                                <select id="contact-subject" name="subject" class="form-input">
+                                    <option value="konsultasi">Konsultasi Belajar Gratis</option>
+                                    <option value="video">Video Belajar Animasi</option>
+                                    <option value="brain-academy">Brain Academy Online</option>
+                                    <option value="privat">RuangGuru Privat</option>
+                                    <option value="sekolah">Kemitraan Sekolah</option>
+                                    <option value="lainnya">Pertanyaan Lainnya</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Pesan / Pertanyaan <span class="required">*</span></label>
+                                <textarea id="contact-message" name="message" class="form-input form-textarea" rows="4"
+                                    placeholder="Tuliskan pertanyaan atau kebutuhan belajar Anda di sini..."
+                                    required></textarea>
+                                <span class="error-msg" id="message-error">Pesan minimal 10 karakter</span>
+                            </div>
+
+                            <button type="submit" class="btn btn-orange btn-full btn-pill" id="submit-btn">Kirim Pesan
+                                Sekarang</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
