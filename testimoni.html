@@ -586,6 +586,80 @@
             </div>
         </section>
 
+        <!-- ===== FORM INTERAKTIF KIRIM TESTIMONI ===== -->
+        <section class="section-padding" id="submit-testimonial-section">
+            <div class="container">
+                <div class="submit-testimonial-wrapper reveal">
+                    <div class="section-header text-center">
+                        <span class="section-tag">BAGIKAN KISAHMU</span>
+                        <h2 class="section-title">Punya Cerita Sukses Bersama Ruang Guru?</h2>
+                        <p class="section-subtitle">Kirimkan pengalaman belajarmu dan beri inspirasi bagi jutaan siswa di seluruh Indonesia.</p>
+                    </div>
+
+                    <form class="submit-testimonial-card" id="submit-testimonial-form">
+                        <!-- Alert Feedback Sukses -->
+                        <div class="alert-success-box" id="testimonial-success-alert" style="display: none;">
+                            <div class="alert-icon">✓</div>
+                            <div>
+                                <strong>Terima kasih banyak! Ulasanmu berhasil terkirim.</strong>
+                                <p>Tim kami akan meninjau testimonimu sebelum ditayangkan di halaman utama.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid grid grid-2">
+                            <div class="form-group">
+                                <label for="testi-name">Nama Lengkap <span class="required">*</span></label>
+                                <input type="text" id="testi-name" placeholder="Contoh: Andini Dewi Savitri" required>
+                                <span class="error-msg">Nama lengkap tidak boleh kosong</span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="testi-school">Asal Sekolah / PTN &amp; Kota <span class="required">*</span></label>
+                                <input type="text" id="testi-school" placeholder="Contoh: SMAN 1 Jakarta • Lolos FK UI" required>
+                                <span class="error-msg">Asal sekolah tidak boleh kosong</span>
+                            </div>
+                        </div>
+
+                        <div class="form-grid grid grid-2">
+                            <div class="form-group">
+                                <label for="testi-category">Kategori Program Belajar <span class="required">*</span></label>
+                                <select id="testi-category" required class="custom-select">
+                                    <option value="" disabled selected>-- Pilih Program Belajar --</option>
+                                    <option value="snbt">Persiapan SNBT &amp; PTN</option>
+                                    <option value="sma">SMA &amp; Juara Kelas</option>
+                                    <option value="sd-smp">SD &amp; SMP</option>
+                                    <option value="privat">RuangGuru Privat</option>
+                                    <option value="ortu-guru">Orang Tua &amp; Guru</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Berikan Rating Bintang <span class="required">*</span></label>
+                                <div class="star-rating-picker" id="star-rating-picker" data-rating="5">
+                                    <span class="star-pick active" data-val="1">★</span>
+                                    <span class="star-pick active" data-val="2">★</span>
+                                    <span class="star-pick active" data-val="3">★</span>
+                                    <span class="star-pick active" data-val="4">★</span>
+                                    <span class="star-pick active" data-val="5">★</span>
+                                    <span class="rating-picker-label" id="rating-picker-label">5.0 dari 5 Bintang</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="testi-message">Cerita Pengalaman &amp; Kenaikan Prestasi Kamu <span class="required">*</span></label>
+                            <textarea id="testi-message" rows="4" placeholder="Tuliskan pengalaman belajarmu, fitur terfavorit, atau kenaikan nilai yang kamu dapatkan..." required minlength="15"></textarea>
+                            <span class="error-msg">Ulasan minimal terdiri dari 15 karakter</span>
+                        </div>
+
+                        <div class="form-action text-center">
+                            <button type="submit" class="btn btn-orange btn-pill">Kirim Testimoni Saya</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- ===== CTA BANNER AJAKAN SUKSES ===== -->
         <div class="cta-banner-wrapper">
             <div class="container">
