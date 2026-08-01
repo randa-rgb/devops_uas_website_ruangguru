@@ -230,4 +230,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    /* --------------------------------------------------------------------------
+       7. TESTIMONIAL CATEGORY FILTER TABS
+       -------------------------------------------------------------------------- */
+    const filterButtons = document.querySelectorAll('.filter-tab-btn');
+    const testimonialItems = document.querySelectorAll('.testimonial-card-item');
+
+    if (filterButtons.length > 0 && testimonialItems.length > 0) {
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const category = btn.getAttribute('data-filter');
+
+                // Update active tab class
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Filter testimonial card items
+                testimonialItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    if (category === 'all' || itemCategory === category) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    }
 });
+
